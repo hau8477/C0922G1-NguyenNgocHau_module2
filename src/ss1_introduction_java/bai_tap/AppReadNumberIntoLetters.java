@@ -66,23 +66,13 @@ public class AppReadNumberIntoLetters {
             int tens = number / 10;
             int ones = number - tens * 10;
 
-            if (number % 10 == 0) {
-                System.out.println(tensNames[tens]);
-            } else {
-                System.out.println(tensNames[tens] + onesNames[ones]);
-            }
+            System.out.println(tensNames[tens] + onesNames[ones]);
         } else if (number < 1000) {
             int hundred = number / 100;
             int tens = (number - hundred * 100) / 10;
             int ones = (number - hundred * 100) - tens * 10;
 
-            if (number % 100 == 0) {
-                System.out.println(hundredNames[hundred]);
-            } else {
-                if (tens % 10 == 0) {
-                    System.out.println(hundredNames[hundred] + tensNames[tens]);
-                } else System.out.println(hundredNames[hundred] + tensNames[tens] + onesNames[ones]);
-            }
+            System.out.println(hundredNames[hundred] + tensNames[tens] + onesNames[ones]);
         }
     }
 }
