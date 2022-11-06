@@ -73,6 +73,6 @@ public class AppReadNumberIntoLetters {
             int ones = (number - hundred * 100) - tens * 10;
 
             System.out.println(hundredNames[hundred] + tensNames[tens] + onesNames[ones]);
-        }
+        } else System.out.println("Out of ability");
     }
 }
