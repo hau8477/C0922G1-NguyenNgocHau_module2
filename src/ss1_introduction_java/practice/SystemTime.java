@@ -1,4 +1,4 @@
-package ss1_introduction_java.thuc_hanh;
+package ss1_introduction_java.practice;
 
 import java.util.Date;
 

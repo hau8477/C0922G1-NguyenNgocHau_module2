@@ -1,13 +1,13 @@
-package ss1_introduction_java.bai_tap;
+package ss1_introduction_java.exercise;
 
 import java.util.Scanner;
 
 public class CurrencyConverterApp {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Mời bạn nhập số tiền USD: ");
+        System.out.print("Please enter USD amount: ");
         float usd = Float.parseFloat(scanner.nextLine());
         float vnd = usd *23000;
-        System.out.println(usd + "$ quy ra tiền VNĐ là: " + vnd + "VNĐ");
+        System.out.println(usd + "$ converted to VND is: " + vnd + "VND");
     }
 }
