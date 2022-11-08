@@ -30,7 +30,7 @@ public class FindMinElementInArray {
     public static int minElement(int[] array) {
         int min = array[0];
         int size = array.length - 1;
-        for (int i = 0; i < size; i++) {
+        for (int i = 1; i < size; i++) {
             if (min > array[i]) {
                 min = array[i];
             }

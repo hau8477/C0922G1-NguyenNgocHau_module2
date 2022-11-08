@@ -13,10 +13,10 @@ public class DeleteElementInArray {
         do {
             System.out.print("Enter a size: ");
             size = Integer.parseInt(scanner.nextLine());
-            if (size > 20) {
-                System.out.println("Size does not exceed 20");
+            if (size <= 0) {
+                System.out.println("Size must be greater than 0.");
             }
-        } while (size > 20);
+        } while (size <= 0);
         array = new int[size];
 
         for (int i = 0; i < size; i++) {
@@ -39,7 +39,6 @@ public class DeleteElementInArray {
                 array[size] = 0;
             }
         }
-
         return array;
     }
 }

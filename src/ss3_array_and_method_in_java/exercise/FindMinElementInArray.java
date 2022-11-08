@@ -3,7 +3,7 @@ package ss3_array_and_method_in_java.exercise;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class AddElementInArray {
+public class FindMinElementInArray {
     public static void main(String[] args) {
         int size;
         int[] array;
@@ -24,20 +24,17 @@ public class AddElementInArray {
             array[i] = Integer.parseInt(scanner.nextLine());
         }
         System.out.println(Arrays.toString(array));
+        System.out.println("Min element in array is: " + minElement(array));
+    }
 
-        System.out.print("Enter the number to insert: ");
-        int number = Integer.parseInt(scanner.nextLine());
-        System.out.print("Enter the index to insert: ");
-        int index = Integer.parseInt(scanner.nextLine());
-
-        if (index < 0 || index > size - 1) {
-            System.out.println("Unable to insert element into array");
-        } else {
-            for (int i = size -1 ; i > index; i--) {
-                array[i] = array[i-1];
+    public static int minElement(int[] array) {
+        int min = array[0];
+        int size = array.length - 1;
+        for (int i = 1; i < size; i++) {
+            if (min > array[i]) {
+                min = array[i];
             }
-            array[index] = number;
         }
-        System.out.println(Arrays.toString(array));
+        return min;
     }
 }
