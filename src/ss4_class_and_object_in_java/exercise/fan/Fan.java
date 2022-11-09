@@ -9,6 +9,10 @@ public class Fan {
     private double radius = 5;
     private String color = "blue";
 
+    public Fan(){
+
+    }
+
     public Fan(int speed, boolean on, double radius, String color) {
         this.speed = speed;
         this.on = on;

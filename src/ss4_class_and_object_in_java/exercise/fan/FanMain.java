@@ -2,6 +2,9 @@ package ss4_class_and_object_in_java.exercise.fan;
 
 public class FanMain {
     public static void main(String[] args) {
+        Fan fan = new Fan();
+        System.out.println("Original fan: " + fan);
+
         Fan fan1 = new Fan(Fan.FAST, true, 10, "Yellow");
         System.out.println("Before: " + fan1);
         fan1.setColor("Black");
