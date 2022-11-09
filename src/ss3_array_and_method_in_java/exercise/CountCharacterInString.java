@@ -11,7 +11,7 @@ public class CountCharacterInString {
         System.out.print("Enter a character: ");
         String character = scanner.nextLine();
 
-        int sizeStr = str.length()-1;
+        int sizeStr = str.length() - 1;
         int count = 0;
 
         for (int i = 0; i < sizeStr; i++) {
@@ -19,6 +19,9 @@ public class CountCharacterInString {
                 count++;
             }
         }
-        System.out.println("Character: " + character.charAt(0) + " appear: " + count);
+        if (count == 0) {
+            System.out.println("Character " + character + " not appear in string " + str);
+        } else System.out.println("Character: " + character.charAt(0) + " appear: " + count);
+
     }
 }

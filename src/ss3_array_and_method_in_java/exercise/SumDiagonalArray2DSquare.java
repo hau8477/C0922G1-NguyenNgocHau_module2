@@ -14,7 +14,7 @@ public class SumDiagonalArray2DSquare {
 
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
-                System.out.print("Enter elements column " + (i + 1) + " row " + (j + 1) + ": ");
+                System.out.print("Enter elements row " + (i + 1) + " column " + (j + 1) + ": ");
                 array2D[i][j] = Double.parseDouble(scanner.nextLine());
             }
         }

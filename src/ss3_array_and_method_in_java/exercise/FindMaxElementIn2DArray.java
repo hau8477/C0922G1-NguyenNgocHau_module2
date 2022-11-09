@@ -13,11 +13,11 @@ public class FindMaxElementIn2DArray {
         System.out.print("Please enter the column: ");
         int column = Integer.parseInt(scanner.nextLine());
 
-        double[][] array2D = new double[column][row];
+        double[][] array2D = new double[row][column];
 
-        for (int i = 0; i < column; i++) {
-            for (int j = 0; j < row; j++) {
-                System.out.print("Enter elements column " + (i + 1) + " row " + (j + 1) + ": ");
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < column; j++) {
+                System.out.print("Enter elements row " + (i + 1) + " column " + (j + 1) + ": ");
                 array2D[i][j] = Double.parseDouble(scanner.nextLine());
             }
         }
@@ -27,8 +27,8 @@ public class FindMaxElementIn2DArray {
         int indexColumn = 0;
         int indexRow = 0;
 
-        for (int i = 0; i < column; i++) {
-            for (int j = 0; j < row; j++) {
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < column; j++) {
                 if (maxInArray2D < array2D[i][j]) {
                     maxInArray2D = array2D[i][j];
                     indexColumn = i;
