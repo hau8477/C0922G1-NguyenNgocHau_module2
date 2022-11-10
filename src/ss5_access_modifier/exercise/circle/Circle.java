@@ -24,7 +24,7 @@ public class Circle {
     @Override
     public String toString() {
         return "Circle{" +
-                "radius=" + radius +
+                "radius=" + getRadius() +
                 ", color='" + color + '\'' +
                 '}';
     }
