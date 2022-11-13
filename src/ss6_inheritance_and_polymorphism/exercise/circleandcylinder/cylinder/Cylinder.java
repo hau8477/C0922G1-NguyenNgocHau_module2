@@ -1,6 +1,6 @@
-package ss6_inheritance_and_polymorphism.exercise.circle.cylinder;
+package ss6_inheritance_and_polymorphism.exercise.circleandcylinder.cylinder;
 
-import ss6_inheritance_and_polymorphism.exercise.circle.circle.Circle;
+import ss6_inheritance_and_polymorphism.exercise.circleandcylinder.circle.Circle;
 
 public class Cylinder extends Circle {
     private double height;
@@ -26,7 +26,7 @@ public class Cylinder extends Circle {
     }
 
     public double getVolume() {
-        return super.getArea()*this.height;
+        return super.getArea() * this.height;
     }
 
     @Override

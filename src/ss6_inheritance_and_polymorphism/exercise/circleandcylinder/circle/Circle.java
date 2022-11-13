@@ -1,4 +1,4 @@
-package ss6_inheritance_and_polymorphism.exercise.circle.circle;
+package ss6_inheritance_and_polymorphism.exercise.circleandcylinder.circle;
 
 public class Circle {
     private double radius;
@@ -29,7 +29,7 @@ public class Circle {
     }
 
     public double getArea() {
-        return Math.PI*Math.pow(radius,2);
+        return Math.PI * Math.pow(radius, 2);
     }
 
     @Override

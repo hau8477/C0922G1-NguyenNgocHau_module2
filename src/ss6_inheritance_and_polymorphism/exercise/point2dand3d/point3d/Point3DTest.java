@@ -1,6 +1,5 @@
 package ss6_inheritance_and_polymorphism.exercise.point2dand3d.point3d;
 
-import ss6_inheritance_and_polymorphism.exercise.point2dand3d.point3d.Point3D;
 
 import java.util.Arrays;
 
