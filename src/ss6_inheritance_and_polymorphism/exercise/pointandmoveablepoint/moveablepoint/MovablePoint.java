@@ -3,8 +3,8 @@ package ss6_inheritance_and_polymorphism.exercise.pointandmoveablepoint.moveable
 import ss6_inheritance_and_polymorphism.exercise.pointandmoveablepoint.point.Point;
 
 public class MovablePoint extends Point {
-    private float xSpeed;
-    private float ySpeed;
+    private float xSpeed,ySpeed;
+
 
     public MovablePoint(float x, float y, float xSpeed, float ySpeed) {
         super(x, y);

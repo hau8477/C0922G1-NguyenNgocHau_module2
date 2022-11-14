@@ -1,8 +1,7 @@
 package ss6_inheritance_and_polymorphism.exercise.pointandmoveablepoint.point;
 
 public class Point {
-    private float x;
-    private float y;
+    private float x,y;
 
     public Point(float x, float y) {
         this.x = x;

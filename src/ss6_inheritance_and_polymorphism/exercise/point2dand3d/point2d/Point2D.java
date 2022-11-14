@@ -1,8 +1,7 @@
 package ss6_inheritance_and_polymorphism.exercise.point2dand3d.point2d;
 
 public class Point2D {
-    private float x;
-    private float y;
+    private float x,y;
 
     public Point2D(float x, float y) {
         this.x = x;
