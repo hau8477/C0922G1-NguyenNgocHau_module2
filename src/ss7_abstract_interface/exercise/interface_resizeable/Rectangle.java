@@ -28,6 +28,7 @@ public class Rectangle extends Geometry {
         this.length = length;
     }
 
+
     public double getArea() {
         return length * width;
     }
