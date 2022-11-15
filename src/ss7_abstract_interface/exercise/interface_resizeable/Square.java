@@ -16,9 +16,4 @@ public class Square extends Rectangle {
         super.setWidth(side);
         super.setLength(side);
     }
-
-    @Override
-    public void resize(double percent) {
-        setSide(getWidth() * (percent / 100 + 1));
-    }
 }
