@@ -9,7 +9,7 @@ public class Square extends Rectangle {
     }
 
     public double getSide() {
-        return side;
+        return getWidth();
     }
 
     public void setSide(double side) {
@@ -21,6 +21,4 @@ public class Square extends Rectangle {
     public void resize(double percent) {
         setSide(getWidth() * (percent / 100 + 1));
     }
-
-
 }
