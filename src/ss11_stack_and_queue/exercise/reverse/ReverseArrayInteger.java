@@ -20,8 +20,8 @@ public class ReverseArrayInteger {
         Stack<Integer> stackInteger = new Stack<>();
         int size = arrayInteger.length;
 
-        for (int i = 0; i < size; i++) {
-            stackInteger.push(arrayInteger[i]);
+        for (int j : arrayInteger) {
+            stackInteger.push(j);
         }
         System.out.println("After array reverse: ");
         for (int i = 0; i < size; i++) {

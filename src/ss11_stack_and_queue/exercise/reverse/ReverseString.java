@@ -1,6 +1,6 @@
 package ss11_stack_and_queue.exercise.reverse;
 
-import java.util.Arrays;
+
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -14,8 +14,8 @@ public class ReverseString {
         String[] arrayString = mWord.split(" ");
         int size = arrayString.length;
 
-        for (int i = 0; i < size; i++) {
-            wStack.push(arrayString[i]);
+        for (String s : arrayString) {
+            wStack.push(s);
         }
 
         System.out.print("String reverse: ");
