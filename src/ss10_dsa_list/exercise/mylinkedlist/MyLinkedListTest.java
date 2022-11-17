@@ -36,7 +36,6 @@ public class MyLinkedListTest {
 
         System.out.println(myLinkedList.constrain(student2));
         System.out.println(myLinkedList.indexOf(student3));
-        System.out.println(myLinkedList.getFirst());
 
     }
 }

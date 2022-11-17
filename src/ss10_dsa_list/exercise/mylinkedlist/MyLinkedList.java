@@ -97,7 +97,7 @@ public class MyLinkedList<E> {
         } else {
             Node temp = head;
             while (temp.next != null) {
-                if (temp.next.data.equals(element)){
+                if (temp.next.data.equals(element)) {
                     temp.next = temp.next.next;
                     numNodes--;
                     return true;
@@ -116,9 +116,9 @@ public class MyLinkedList<E> {
         Node temp = head;
         returnLinkedList.addFirst((E) temp.data);
         temp = temp.next;
-        while (temp != null){
+        while (temp != null) {
             returnLinkedList.addFirst((E) temp.data);
-            temp =temp.next;
+            temp = temp.next;
         }
         return returnLinkedList;
     }
@@ -144,4 +144,12 @@ public class MyLinkedList<E> {
         }
         return -1;
     }
+
+//    public E getFirst(){
+//        Node temp = head;
+//        if (temp.data == null) {
+//            throw new NoSuchElementException();
+//        }
+//        return (E) ;
+//    }
 }
