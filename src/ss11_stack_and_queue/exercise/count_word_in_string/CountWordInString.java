@@ -10,7 +10,7 @@ public class CountWordInString {
         String document = scanner.nextLine();
 
         String[] arrayDocument = document.split(" ");
-        Map<String, Integer> numberWord = new HashMap<>();
+        Map<String, Integer> numberWord = new TreeMap<>();
         int value;
 
         for (String item : arrayDocument) {
