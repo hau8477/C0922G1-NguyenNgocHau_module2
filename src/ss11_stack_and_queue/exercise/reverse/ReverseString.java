@@ -11,10 +11,10 @@ public class ReverseString {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter a string: ");
-        String mWord = scanner.nextLine();
-        String[] arrayString = mWord.split(" ");
+        String string = scanner.nextLine();
+        String[] mWord = string.split(" ");
 
-        for (String s : arrayString) {
+        for (String s : mWord) {
             if (!Objects.equals(s, "")) {
                 wStack.push(s);
             }
