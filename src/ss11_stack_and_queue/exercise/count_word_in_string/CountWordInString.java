@@ -11,9 +11,10 @@ public class CountWordInString {
 
         String[] arrayDocument = document.split(" ");
         Map<String, Integer> numberWord = new HashMap<>();
+        int value;
 
         for (String item : arrayDocument) {
-            int value = 0;
+            value = 0;
             for (String s : arrayDocument) {
                 if (Objects.equals(item, s)) {
                     value++;
