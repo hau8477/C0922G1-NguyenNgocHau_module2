@@ -22,17 +22,9 @@ public class BinarySearchUseRecursion {
         }
 
         System.out.println("Original array: " + Arrays.toString(arrayInteger));
-        int temp;
 
-        for (int i = 0; i < lengthArrayInteger - 1; i++) {
-            for (int j = 0; j < lengthArrayInteger - i - 1; j++) {
-                if (arrayInteger[j] > arrayInteger[j + 1]) {
-                    temp = arrayInteger[j];
-                    arrayInteger[j] = arrayInteger[j + 1];
-                    arrayInteger[j + 1] = temp;
-                }
-            }
-        }
+        Arrays.sort(arrayInteger);
+
         System.out.println("Sorted array: " + Arrays.toString(arrayInteger));
         System.out.print("Enter value to find: ");
         int searchValue = Integer.parseInt(scanner.nextLine());
