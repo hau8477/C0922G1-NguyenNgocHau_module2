@@ -16,29 +16,33 @@ public class MainProductArrayList {
                 "7. Sort descending by price. \n" +
                 "8. Exit. \n" +
                 "Enter selection: \n");
-        int choice = Integer.parseInt(scanner.nextLine());
+        String choice = scanner.nextLine();
+        while (choice.equals("")) {
+            System.out.println("Invalid selection. Retype");
+            choice = scanner.nextLine();
+        }
 
-        while (choice != 8) {
+        while (!choice.equals("8")) {
             switch (choice) {
-                case 1:
+                case "1":
                     productManager.addProduct();
                     break;
-                case 2:
+                case "2":
                     productManager.editProduct();
                     break;
-                case 3:
+                case "3":
                     productManager.deleteProduct();
                     break;
-                case 4:
+                case "4":
                     productManager.displayProduct();
                     break;
-                case 5:
+                case "5":
                     productManager.findProduct();
                     break;
-                case 6:
+                case "6":
                     productManager.sortProductLowToHigh();
                     break;
-                case 7:
+                case "7":
                     productManager.sortProductHighToLow();
                 default:
                     System.out.println("Invalid selection. Retype!");
@@ -55,7 +59,11 @@ public class MainProductArrayList {
                     "7. Sort descending by price. \n" +
                     "8. Exit. \n" +
                     "Enter selection: \n");
-            choice = Integer.parseInt(scanner.nextLine());
+            choice = scanner.nextLine();
+            while (choice.equals("")) {
+                System.out.println("Invalid selection. Retype");
+                choice = scanner.nextLine();
+            }
         }
     }
 }
