@@ -33,7 +33,7 @@ public class InsertSortByStep {
             }
             array[pos] = x;
             if (i != pos) {
-                System.out.println("Array after inserting array[" + pos + "] = array[" + i + "] is: "
+                System.out.println("Array after inserting array[" + i + "] = array[" + (i-1) + "] is: "
                         + Arrays.toString(array));
             }
         }
