@@ -81,7 +81,7 @@ public class CopyFileText {
     }
 
     public static void main(String[] args) {
-        // Khởi tạo đối tượng copy FileText.
+        // Khởi tạo đối tượng CopyFileText.
         CopyFileText copyFileText = new CopyFileText();
 
         // Ghi data vào file source_file, gọi phương thức writeFile với tham số truyền vào là file chứa dữ liệu data.
