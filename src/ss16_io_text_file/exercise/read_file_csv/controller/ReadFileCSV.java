@@ -13,20 +13,6 @@ import java.util.List;
 public class ReadFileCSV {
     public static final String PATH_FILE = "src/ss16_io_text_file/exercise/read_file_csv/data/file.csv";
 
-//    public static List<String> parseCsvLine(String csvLine) {
-//        List<String> result = new ArrayList<>();
-//
-//        if (csvLine != null) {
-//            String[] splitData = csvLine.split(",");
-//            int lengthSplitData = splitData.length;
-//
-//            for (int i = 0; i < lengthSplitData; i++) {
-//                result.add(splitData[i]);
-//            }
-//        }
-//        return result;
-//    }
-
     public static Country parseCsvLine(String line) {
         String[] splitData = line.split(",");
         int id = Integer.parseInt(splitData[0]);
