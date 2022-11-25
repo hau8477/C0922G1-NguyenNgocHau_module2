@@ -4,11 +4,8 @@ package ss16_io_text_file.exercise.read_file_csv.controller;
 import ss16_io_text_file.exercise.read_file_csv.model.Country;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 public class ReadFileCSV {
     public static final String PATH_FILE = "src/ss16_io_text_file/exercise/read_file_csv/data/file.csv";
@@ -18,8 +15,7 @@ public class ReadFileCSV {
         int id = Integer.parseInt(splitData[0]);
         String code = splitData[1];
         String name = splitData[2];
-        Country countries = new Country(id, code, name);
-        return countries;
+        return new Country(id, code, name);
     }
 
     public static void printCountry(Country country) {
