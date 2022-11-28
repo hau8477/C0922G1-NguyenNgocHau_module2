@@ -12,10 +12,7 @@ public class ReadFileCSV {
 
     public static void parseCsvLine(String line) {
         String[] splitData = line.split(",");
-        int id = Integer.parseInt(splitData[0]);
-        String code = splitData[1];
-        String name = splitData[2];
-        Country country = new Country(id, code, name);
+        Country country = new Country(splitData);
         System.out.println(country.toString());
     }
 

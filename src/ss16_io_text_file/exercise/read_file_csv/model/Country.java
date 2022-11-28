@@ -14,6 +14,12 @@ public class Country {
         this.name = name;
     }
 
+    public Country(String[] array) {
+        this.id = Integer.parseInt(array[0]);
+        this.code = array[1];
+        this.name = array[2];
+    }
+
     public int getId() {
         return id;
     }
