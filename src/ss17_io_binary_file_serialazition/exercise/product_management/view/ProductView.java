@@ -52,7 +52,7 @@ public class ProductView {
                     if (checkProduct) {
                         for (Product p: this.productController.getAllProduct()) {
                           if (p.getId() == idFind) {
-                              System.out.println(p.toString());
+                              System.out.println(p);
                           }
                         }
                     } else {
