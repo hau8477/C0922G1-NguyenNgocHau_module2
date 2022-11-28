@@ -11,7 +11,7 @@ public class ProductController {
     private final IProductService productService = new ProductServiceImpl();
 
     public void add(Product product) {
-        this.productService.add(product);
+        this.productService.addProduct(product);
     }
 
     public List<Product> getAllProduct(){

@@ -60,11 +60,11 @@ public class ProductView {
                     }
                     break;
                 case 4:
-                    System.out.println("Exit menu.");
+                    System.exit(0);
                     break;
                 default:
                     System.out.println("Invalid input.");
             }
-        } while (choice!=4);
+        } while (true);
     }
 }

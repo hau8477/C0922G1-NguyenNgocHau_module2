@@ -11,10 +11,9 @@ public class ProductServiceImpl implements IProductService {
 
     public static final String PATH_FILE =
             "src/ss17_io_binary_file_serialazition/exercise/product_management/reponsitory/reponsitory.txt";
-
+    public static List<Product> products = new ArrayList<>();
     @Override
-    public void add(Product product) {
-        List<Product> products = new ArrayList<>();
+    public void addProduct(Product product) {
         for (Product p : products) {
             if (p.getId() == product.getId()) {
                 System.out.println("Id already exists");
@@ -43,7 +42,6 @@ public class ProductServiceImpl implements IProductService {
                 throw new RuntimeException(e);
             }
         }
-        return;
     }
 
     @Override

@@ -5,7 +5,7 @@ import ss17_io_binary_file_serialazition.exercise.product_management.model.Produ
 import java.util.List;
 
 public interface IProductService {
-    void add(Product product);
+    void addProduct(Product product);
 
     List<Product> getAllProduct();
 
