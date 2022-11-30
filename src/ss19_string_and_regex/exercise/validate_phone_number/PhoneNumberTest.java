@@ -7,13 +7,16 @@ public class PhoneNumberTest {
         PhoneNumber phoneNumber = new PhoneNumber();
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter phone number (ex: (84)-(0978489648)): ");
-        String numberPhone = scanner.nextLine();
+        do {
+            System.out.print("Enter phone number (ex: (84)-(0978489648)): ");
+            String numberPhone = scanner.nextLine();
 
-        if (phoneNumber.validatePhoneNumber(numberPhone)) {
-            System.out.println("Phone number valid.");
-        } else {
-            System.out.println("Phone number not valid.");
-        }
+            if (phoneNumber.validatePhoneNumber(numberPhone)) {
+                System.out.println("Phone number valid.");
+                break;
+            } else {
+                System.out.println("Phone number not valid.");
+            }
+        } while (true);
     }
 }
