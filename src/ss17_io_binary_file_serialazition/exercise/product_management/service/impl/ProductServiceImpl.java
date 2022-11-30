@@ -10,10 +10,11 @@ import java.util.List;
 public class ProductServiceImpl implements IProductService {
 
     private static final String PATH_FILE =
-            "src/ss17_io_binary_file_serialazition/exercise/product_management/reponsitory/reponsitory.txt";
-    private static List<Product> products = new ArrayList<>();
+            "src/ss17_io_binary_file_serialazition/exercise/product_management/data/reponsitory.txt";
     @Override
-    public void addProduct(Product product) {
+    public void addProduct(Product product) throws IOException, ClassNotFoundException {
+        List<Product> products = getAllProduct();
+
         for (Product p : products) {
             if (p.getId() == product.getId()) {
                 System.out.println("Id already exists");
@@ -45,34 +46,20 @@ public class ProductServiceImpl implements IProductService {
     }
 
     @Override
-    public List<Product> getAllProduct() {
-        List<Product> productList;
-        FileInputStream fileInputStream = null;
-        ObjectInputStream objectInputStream = null;
+    public List<Product> getAllProduct() throws IOException, ClassNotFoundException {
+        File file = new File(PATH_FILE);
+        List<Product> products;
 
-        try {
-            fileInputStream = new FileInputStream(PATH_FILE);
-            objectInputStream = new ObjectInputStream(fileInputStream);
-            productList = (List<Product>) objectInputStream.readObject();
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        } finally {
-            try {
-                objectInputStream.close();
-                fileInputStream.close();
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        }
-        return productList;
+        FileInputStream fileInputStream = new FileInputStream(file);
+        ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+        products = (List<Product>) objectInputStream.readObject();
+        objectInputStream.close();
+        fileInputStream.close();
+        return products;
     }
 
     @Override
-    public boolean findProductInfo(int id) {
+    public boolean findProductInfo(int id) throws IOException, ClassNotFoundException {
         List<Product> products = getAllProduct();
         for (Product p : products) {
             if (id == p.getId()) {
