@@ -13,7 +13,7 @@ public class ReadFileCSV {
     public static void parseCsvLine(String line) {
         String[] splitData = line.split(",");
         Country country = new Country(splitData);
-        System.out.println(country.toString());
+        System.out.println(country);
     }
 
     public static void main(String[] args) {
@@ -36,7 +36,6 @@ public class ReadFileCSV {
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-
         }
     }
 }

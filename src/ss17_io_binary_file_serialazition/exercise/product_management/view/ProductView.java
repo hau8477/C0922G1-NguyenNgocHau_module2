@@ -16,11 +16,11 @@ public class ProductView {
 
         do {
             System.out.print("--------Product--------- \n" +
-                "1. Add product. \n" +
-                "2. Display list product. \n" +
-                "3. Find product by id. \n" +
-                "4. Exit. \n" +
-                "Enter selection: \n");
+                    "1. Add product. \n" +
+                    "2. Display list product. \n" +
+                    "3. Find product by id. \n" +
+                    "4. Exit. \n" +
+                    "Enter selection: \n");
             choice = Integer.parseInt(scanner.nextLine());
             switch (choice) {
                 case 1:
@@ -51,9 +51,9 @@ public class ProductView {
                     boolean checkProduct = this.productController.findProductInfo(idFind);
                     if (checkProduct) {
                         for (Product p: this.productController.getAllProduct()) {
-                          if (p.getId() == idFind) {
-                              System.out.println(p);
-                          }
+                            if (p.getId() == idFind) {
+                                System.out.println(p);
+                            }
                         }
                     } else {
                         System.out.println("Invalid id.");

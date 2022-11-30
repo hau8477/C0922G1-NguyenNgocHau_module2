@@ -9,9 +9,9 @@ import java.util.List;
 
 public class ProductServiceImpl implements IProductService {
 
-    public static final String PATH_FILE =
+    private static final String PATH_FILE =
             "src/ss17_io_binary_file_serialazition/exercise/product_management/reponsitory/reponsitory.txt";
-    public static List<Product> products = new ArrayList<>();
+    private static List<Product> products = new ArrayList<>();
     @Override
     public void addProduct(Product product) {
         for (Product p : products) {
