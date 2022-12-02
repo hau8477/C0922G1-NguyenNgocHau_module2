@@ -12,7 +12,7 @@ import java.util.List;
 public class StudentController {
     private final IStudentService studentService = new StudentServiceImpl();
 
-    public List<Student> displayListStudent(){
+    public List<Student> displayListStudent() {
         try {
             return this.studentService.displayListStudent();
         } catch (IOException e) {
@@ -21,7 +21,7 @@ public class StudentController {
         }
     }
 
-    public void addStudent(Student student){
+    public void addStudent(Student student) {
         try {
             this.studentService.addStudent(student);
         } catch (IOException | ExistedStudentExceptions e) {
@@ -29,7 +29,7 @@ public class StudentController {
         }
     }
 
-    public void editStudent(Student student){
+    public void editStudent(Student student) {
         try {
             this.studentService.editStudent(student);
         } catch (IOException e) {
@@ -37,7 +37,7 @@ public class StudentController {
         }
     }
 
-    public void deleteStudent(int id){
+    public void deleteStudent(int id) {
         try {
             this.studentService.deleteStudent(id);
         } catch (IOException | NotFoundStudentExceptions e) {

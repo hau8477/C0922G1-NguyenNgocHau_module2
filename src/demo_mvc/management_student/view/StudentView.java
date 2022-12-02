@@ -1,7 +1,6 @@
 package demo_mvc.management_student.view;
 
 import demo_mvc.management_student.controller.StudentController;
-import demo_mvc.management_student.exceptions.InvalidAgeException;
 import demo_mvc.management_student.model.Student;
 
 import java.util.List;
@@ -13,22 +12,33 @@ public class StudentView {
     private final Scanner scanner = new Scanner(System.in);
 
     public void displayMenu() {
-        int choice;
-
         do {
+            int choice;
             System.out.println("------------Student Management------------\n" +
                     "1.Display list students.\n" +
                     "2.Add student.\n" +
                     "3.Edit student.\n" +
                     "4.Delete student.\n" +
                     "5.Exit.\n");
-            System.out.print("Enter your option: ");
-            choice = Integer.parseInt(scanner.nextLine());
+            do {
+                try {
+                    System.out.print("Enter your option: ");
+                    choice = Integer.parseInt(scanner.nextLine());
+                    break;
+                } catch (NumberFormatException e) {
+                    System.err.print("Please enter the correct option: ");
+                }
+            } while (true);
             switch (choice) {
                 case 1:
                     List<Student> students = this.studentController.displayListStudent();
-                    for (Student student:students) {
-                        System.out.println(student);
+
+                    if (students.size() == 0) {
+                        System.out.println("List empty.");
+                    } else {
+                        for (Student student : students) {
+                            System.out.println(student);
+                        }
                     }
                     break;
                 case 2:
@@ -41,7 +51,7 @@ public class StudentView {
                     System.out.print("Enter address: ");
                     String address = scanner.nextLine();
 
-                    Student student = new Student(id,name,address);
+                    Student student = new Student(id, name, address);
                     this.studentController.addStudent(student);
                     break;
                 case 3:
@@ -54,7 +64,7 @@ public class StudentView {
                     System.out.print("Enter new address: ");
                     String newAddress = scanner.nextLine();
 
-                    Student newStudent = new Student(updateID,newName,newAddress);
+                    Student newStudent = new Student(updateID, newName, newAddress);
                     this.studentController.editStudent(newStudent);
                     break;
                 case 4:

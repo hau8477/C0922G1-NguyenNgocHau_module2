@@ -9,11 +9,11 @@ import java.io.IOException;
 import java.util.List;
 
 public class StudentServiceImpl implements IStudentService {
-    private static final String PATH_FILE = "src/demo_mvc/management_student/data/student_file.csv";
+    private static final String PATH_FILE = "src/demo_mvc/management_student/data/student.csv";
 
     private final StudentIOServiceImpl studentIOService = new StudentIOServiceImpl();
     @Override
-    public List<Student> displayListStudent() throws IOException{
+    public List<Student> displayListStudent() throws IOException {
         return this.studentIOService.readFile(PATH_FILE,true);
     }
 
