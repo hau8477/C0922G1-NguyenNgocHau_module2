@@ -15,7 +15,11 @@ public class PhoneNumberTest {
                 System.out.println("Phone number valid.");
                 break;
             } else {
-                System.out.println("Phone number not valid.");
+               try {
+                   throw new RegexException("Phone number not valid.");
+               }catch (RegexException e){
+                   e.printStackTrace();
+               }
             }
         } while (true);
     }
